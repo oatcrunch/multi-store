@@ -1,6 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -22,13 +20,14 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _pageIndex = 0;
 
+  // ignore: prefer_final_fields
   List<Widget> _pages = [
-    HomeScreen(),
-    CategoryScreen(),
-    StoreScreen(),
-    CartScreen(),
-    SearchScreen(),
-    AccountScreen()
+    const HomeScreen(),
+    const CategoryScreen(),
+    const StoreScreen(),
+    const CartScreen(),
+    const SearchScreen(),
+    const AccountScreen()
   ];
   @override
   Widget build(BuildContext context) {
@@ -44,7 +43,7 @@ class _MainScreenState extends State<MainScreen> {
           unselectedItemColor: Colors.black,
           selectedItemColor: Colors.yellow.shade900,
           items: [
-            BottomNavigationBarItem(
+            const BottomNavigationBarItem(
                 icon: Icon(CupertinoIcons.home), label: 'HOME'),
             BottomNavigationBarItem(
               icon: SvgPicture.asset('assets/icons/explore.svg', width: 20),
